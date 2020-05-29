@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">KULINER JOGJA    </string>
+    <string name="profile">PROFILE</string>
+    <string name="category">Category</string>
+    <string name="favorite">Favorie in Jogja</string>
+    <string name="home">HOME</string>
+    <string name="daftarkan">DAFTARKAN</string>
+
+    <string name="food">FOOD</string>
+    <string name="drink">DRINK</string>
+
+    <string name="recomendation">RECOMENDATION"</string>
+    <string name="list">LIST</string>
+</resources>
