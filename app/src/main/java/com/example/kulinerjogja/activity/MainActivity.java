@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         //memunculkan fragment diawal
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragmen_container,new HomeFragment())
+                .replace(R.id.fragment_container,new HomeFragment())
                 .commit();
     }
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             assert selected_fragment != null;
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.fragmen_container, selected_fragment)
+                    .replace(R.id.fragment_container, selected_fragment)
                     .commit();
             return true;
         }
