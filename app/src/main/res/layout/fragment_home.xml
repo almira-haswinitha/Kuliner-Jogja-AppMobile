@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <LinearLayout
             android:orientation="vertical"
             android:background="@drawable/bg"
@@ -37,8 +38,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Makanan"
+                    android:text="Kategori"
                     android:textSize="30sp"
+                    android:textColor="@color/putih"
+                    android:paddingLeft="15dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Makanan"
+                    android:textSize="20sp"
                     android:textColor="@color/putih"
                     android:paddingLeft="15dp"/>
 
@@ -420,7 +434,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Minuman"
-                    android:textSize="30sp"
+                    android:textSize="20sp"
                     android:textColor="@color/birutua"
                     android:paddingLeft="15dp"/>
 
