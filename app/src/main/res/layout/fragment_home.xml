@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,22 +17,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <!--RelativeLayout
-                android:layout_weight="2"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp">
+                android:layout_height="match_parent"
+                android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/textGrid"
-                    android:text="Kuliner Jogja"
-                    android:textSize="34sp"
-                    android:textColor="@color/putih"
-                    android:layout_centerInParent="true"
+                <AdapterViewFlipper
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/adapter_view_flipper"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp" />
+            </RelativeLayout>
 
-            </RelativeLayout-->
 
+<!-- KATEGORI -->
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
@@ -39,6 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kategori"
+                    android:id="@+id/kategori"
                     android:textSize="30sp"
                     android:textColor="@color/putih"
                     android:paddingLeft="15dp"/>
@@ -57,6 +58,7 @@
                     android:paddingLeft="15dp"/>
 
             </RelativeLayout>
+
 
             <GridLayout
                 android:id="@+id/homeGrid1"
