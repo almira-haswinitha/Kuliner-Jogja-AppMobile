@@ -6,9 +6,9 @@
         android:icon="@drawable/ic_home"
         android:title="@string/home" />
     <item
-        android:id="@+id/btnList"
+        android:id="@+id/btnDaftar"
         android:icon="@drawable/ic_list"
-        android:title="@string/list" />
+        android:title="@string/daftar_kuliner" />
     <item
         android:id="@+id/btnProfil"
         android:icon="@drawable/ic_akun"
