@@ -118,7 +118,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Me"
+                            android:text="Ayam"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
@@ -158,7 +158,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Team"
+                            android:text="Cemilan"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
@@ -197,7 +197,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Team"
+                            android:text="Gudeg"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
@@ -239,7 +239,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Friends"
+                            android:text="Sate"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
@@ -278,7 +278,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Calendars"
+                            android:text="Martabak"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
@@ -318,7 +318,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Friends"
+                            android:text="Mie"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
@@ -358,7 +358,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Calendars"
+                            android:text="Mie"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
@@ -381,7 +381,9 @@
                     android:layout_marginLeft="7dp"
                     android:layout_marginRight="7dp"
                     app:cardElevation="8dp"
-                    app:cardCornerRadius="8dp" ><LinearLayout
+                    app:cardCornerRadius="8dp" >
+
+                    <LinearLayout
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="16dp"
                     android:orientation="vertical"
@@ -395,7 +397,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:text="Calendars"
+                        android:text="Bakso"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
@@ -435,7 +437,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Calendars"
+                            android:text="Roti"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
@@ -500,7 +502,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Me"
+                            android:text="Es Krim"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
@@ -540,7 +542,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Team"
+                            android:text="Bubble Tea"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
@@ -579,7 +581,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Team"
+                            android:text="Salad"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
@@ -621,7 +623,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
-                            android:text="Friends"
+                            android:text="Kopi"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="18sp"
