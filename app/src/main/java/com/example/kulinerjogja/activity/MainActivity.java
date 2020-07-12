@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.kulinerjogja.R;
 import com.example.kulinerjogja.fragment.HomeFragment;
-import com.example.kulinerjogja.fragment.ListFragment;
+import com.example.kulinerjogja.fragment.DaftarFragment;
 import com.example.kulinerjogja.fragment.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btnHome:
                     selected_fragment = new HomeFragment();
                     break;
-                case R.id.btnList:
-                    selected_fragment = new ListFragment();
+                case R.id.btnDaftar:
+                    selected_fragment = new DaftarFragment();
                     break;
                 case R.id.btnProfil:
                     selected_fragment = new ProfileFragment();
