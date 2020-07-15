@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">KULINER JOGJA    </string>
-    <string name="profile">PROFILE</string>
-    <string name="category">Category</string>
-    <string name="favorite">Favorie in Jogja</string>
-    <string name="home">HOME</string>
+    <string name="profil">PROFIL</string>
+    <string name="kategori">Kategori</string>
+    <string name="favorit">Favorit di Jogja</string>
+    <string name="beranda">Beranda</string>
     <string name="daftar_kuliner">DAFTARKAN</string>
 
-    <string name="food">FOOD</string>
-    <string name="drink">DRINK</string>
+    <string name="makanan">MAKANAN</string>
+    <string name="minuman">MINUMAN</string>
 
     <string name="recomendation">RECOMENDATION"</string>
+    <string name="profile" />
+    <string name="home" />
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
