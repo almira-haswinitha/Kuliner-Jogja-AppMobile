@@ -17,11 +17,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
+            <!-- menu search -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardSearch"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/birumuda"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:text="search"
+                    android:textColor="@color/birutua"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="10dp" />
+
+            </androidx.cardview.widget.CardView>
+
 <!-- image slider -->
             <RelativeLayout
                 android:id="@+id/layout_top"
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="200dp"
+                android:paddingTop="20dp">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -63,7 +89,8 @@
                     android:id="@+id/kategori"
                     android:textSize="30sp"
                     android:textColor="@color/putih"
-                    android:paddingLeft="15dp"/>
+                    android:paddingLeft="15dp"
+                    android:paddingTop="18dp"/>
 
             </RelativeLayout>
 
@@ -82,7 +109,7 @@
 
 
             <GridLayout
-                android:id="@+id/homeGrid1"
+                android:id="@+id/homeGrid"
                 android:columnCount="3"
                 android:rowCount="4"
                 android:alignmentMode="alignMargins"
@@ -464,7 +491,7 @@
                     android:paddingLeft="15dp"/>
 
             </RelativeLayout>
-
+?
             <GridLayout
                 android:id="@+id/homeGrid2"
                 android:columnCount="3"
