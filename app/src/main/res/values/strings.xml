@@ -10,7 +10,21 @@
     <string name="minuman">MINUMAN</string>
 
     <string name="recomendation">RECOMENDATION"</string>
-    <string name="profile" />
-    <string name="home" />
+    <string name="profile">Profil</string>
+    <string name="home">Home</string>
+    <string name="img_logo">logo</string>
+    <string name="or">or</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="no_hp">No Hp</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="create_account">Create Account </string>
+    <string name="have_account">Have Account ?</string>
+    <string name="sign_in"> Sign In</string>
+    <string name="connect_facebook">Connect Facebook</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="register">Register</string>
+    <string name="sign_up"> Sign Up </string>
 
 </resources>
