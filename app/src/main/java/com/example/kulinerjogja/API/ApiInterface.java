@@ -1,4 +1,4 @@
-package com.example.kulinerjogja.rest;
+package com.example.kulinerjogja.API;
 
 import com.example.kulinerjogja.response.ResponseLogin;
 
