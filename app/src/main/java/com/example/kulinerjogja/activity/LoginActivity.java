@@ -2,10 +2,10 @@ package com.example.kulinerjogja.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.kulinerjogja.R;
 import com.example.kulinerjogja.API.ApiClient;
+import com.example.kulinerjogja.R;
 import com.example.kulinerjogja.API.ApiInterface;
-import com.example.kulinerjogja.utils.SessionManager;
+import com.example.kulinerjogja.model.login.Login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,13 +19,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     EditText etUsername, etPassword;
     Button btnLogin;
     String Username, Password;
     TextView tvRegister;
     ApiInterface apiInterface;
-    SessionManager sessionManager;
 
 
     @Override
@@ -52,13 +51,31 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 login(Username,Password);
                 break;
             case R.id.tvCreateAccount:
-                Intent intent = new Intent(this, Register.class);
+                Intent intent = new Intent(this, RegisterActivity.class);
                 startActivity(intent);
                 break;
         }
     }
 
     private void login(String username, String password) {
+
+        apiInterface = ApiClient.getClient().create(ApiInterface.class);
+        Call<Login> loginCall = apiInterface.loginResponse(username,password);
+        loginCall.enqueue(new Callback<Login>() {
+            @Override
+            public void onResponse(Call<Login> call, Response<Login> response) {
+                if(response.body() != null && response.isSuccessful() && response.body().isStatus()){
+                    Toast.makeText(LoginActivity.this, response.body().getLoginData().getName(), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Login> call, Throwable t) {
+
+            }
+        });
 
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

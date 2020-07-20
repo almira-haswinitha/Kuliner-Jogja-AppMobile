@@ -10,8 +10,8 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 
 import com.example.kulinerjogja.R;
-import com.example.kulinerjogja.activity.Login;
-import com.example.kulinerjogja.activity.Register;
+import com.example.kulinerjogja.activity.LoginActivity;
+import com.example.kulinerjogja.activity.RegisterActivity;
 
 public class ProfileFragment extends Fragment {
     private Button btnSignIn, btnSignUp;
@@ -25,7 +25,7 @@ public class ProfileFragment extends Fragment {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sign_in = new Intent(getActivity(), Login.class);
+                Intent sign_in = new Intent(getActivity(), LoginActivity.class);
                 startActivity(sign_in);
             }
         });
@@ -33,7 +33,7 @@ public class ProfileFragment extends Fragment {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sign_up = new Intent(getActivity(), Register.class);
+                Intent sign_up = new Intent(getActivity(), RegisterActivity.class);
                 startActivity(sign_up);
             }
         });

@@ -3,23 +3,16 @@ package com.example.kulinerjogja.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.kulinerjogja.R;
-import com.example.kulinerjogja.API.ApiClient;
 import com.example.kulinerjogja.API.ApiInterface;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-public class Register extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
     EditText etUsername, etPassword, etNama, etEmail;
     Button btnRegister;
     TextView tvLogin;
@@ -54,7 +47,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                 register(Username, Password, Nama, Email);
                 break;
             case R.id.tvLoginHere:
-                Intent intent = new Intent(this, Login.class);
+                Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 finish();
                 break;
@@ -62,7 +55,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void register(String username, String password, String nama, String email) {
-        Intent intent = new Intent(this, Login.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
 
