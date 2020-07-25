@@ -28,9 +28,9 @@ if($_POST){
             $response['status'] = true;
             $response['message'] = "Login Berhasil";
             $response['data'] = [
-                'user_id' => $query['id_user'],
+                'user_id' => $query['id'],
                 'username' => $query['username'],
-                'name' => $query['nama_lengkap'],
+                'name' => $query['name'],
                 'email' => $query['email']
             ];
         } else {

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.kulinerjogja.API.ApiClient;
 import com.example.kulinerjogja.R;
 import com.example.kulinerjogja.API.ApiInterface;
+import com.example.kulinerjogja.SessionManager;
 import com.example.kulinerjogja.model.login.Login;
 import com.example.kulinerjogja.model.login.LoginData;
 
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     String Username, Password;
     TextView tvRegister;
     ApiInterface apiInterface;
+    SessionManager sessionManager;
 
 
     @Override
@@ -68,9 +70,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 if(response.body() != null && response.isSuccessful() && response.body().isStatus()){
 
                     // Ini untuk menyimpan sesi
-                    //sessionManager = new SessionManager(LoginActivity.this);
-                    //LoginData loginData = response.body().getLoginData();
-                    //sessionManager.createLoginSession(loginData);
+                    sessionManager = new SessionManager(LoginActivity.this);
+                    LoginData loginData = response.body().getLoginData();
+                    sessionManager.createLoginSession(loginData);
 
                     //Ini untuk pindah
                     Toast.makeText(LoginActivity.this, response.body().getLoginData().getName(), Toast.LENGTH_SHORT).show();

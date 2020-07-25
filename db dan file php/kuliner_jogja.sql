@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Jul 2020 pada 20.36
+-- Waktu pembuatan: 24 Jul 2020 pada 18.58
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.2
 
@@ -29,45 +29,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `akun` (
-  `id_user` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(30) NOT NULL,
-  `nama_lengkap` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
   `email` varchar(70) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `akun`
---
-
-INSERT INTO `akun` (`id_user`, `username`, `password`, `nama_lengkap`, `email`) VALUES
-(7, 'almiraaa', 'almira123', 'Almira Haswinitha', 'almirahaswinitha@gmail.com');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `datamenu`
---
-
-CREATE TABLE `datamenu` (
-  `idmenu` varchar(20) NOT NULL,
-  `kategori-menu` varchar(30) NOT NULL,
-  `nama-menu` varchar(30) NOT NULL,
-  `harga` varchar(30) NOT NULL,
-  `idresto` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `datamenu`
---
-
-INSERT INTO `datamenu` (`idmenu`, `kategori-menu`, `nama-menu`, `harga`, `idresto`) VALUES
-('A11YT', 'Snack', 'Dimsum', '6000', 'A12345'),
-('A12ER', 'mie', 'Mie Setan', '12000', 'A12345'),
-('A12QQ', 'snack', 'siomay', '6000', 'A12345'),
-('A15NM', 'sweet', 'Es Genderuwo', '10000', 'A12345'),
-('A67AQ', 'dessert', 'Triple Cheese', '20000', 'A67891'),
-('A67WD', 'dessert', 'Tiramisu', '15000', 'A67891');
 
 -- --------------------------------------------------------
 
@@ -76,48 +43,30 @@ INSERT INTO `datamenu` (`idmenu`, `kategori-menu`, `nama-menu`, `harga`, `idrest
 --
 
 CREATE TABLE `kuliner` (
-  `idresto` varchar(20) NOT NULL,
+  `id_resto` int(11) NOT NULL,
   `namaresto` varchar(20) NOT NULL,
   `alamat` text NOT NULL,
-  `hari-operasional` varchar(10) NOT NULL,
-  `waktu buka` varchar(10) NOT NULL,
-  `waktu tutup` varchar(10) NOT NULL,
+  `hari_operasional` varchar(10) NOT NULL,
+  `waktu_buka` varchar(10) NOT NULL,
+  `waktu_tutup` varchar(10) NOT NULL,
   `deskripsi` text NOT NULL,
-  `gambar` varchar(20) NOT NULL
+  `gambar` varchar(20) NOT NULL,
+  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `kuliner`
---
-
-INSERT INTO `kuliner` (`idresto`, `namaresto`, `alamat`, `hari-operasional`, `waktu buka`, `waktu tutup`, `deskripsi`, `gambar`) VALUES
-('A12345', 'Mie Gacoan - Tamsis', 'Jl. Taman Siswa No.27, Wirogunan, Kec. Mergangsan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55151', 'setiap har', '07.00', '07.00', 'Tersedia berbagai macam makanan mie dan makanan penutup lainnya', 'miegacoan.png'),
-('A67891', 'Moreo Dessert - Depo', 'Jl. Sepakbola No.91, Ngropoh, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281', 'setiap har', '10.00', '22.00', 'Menjual berbagai macam dessert manis yang enak', 'moreo.png');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `profil`
+-- Struktur dari tabel `menu`
 --
 
-CREATE TABLE `profil` (
-  `idpengguna` varchar(20) NOT NULL,
-  `namapengguna` varchar(20) NOT NULL,
-  `jeniskelamin` enum('laki-laki','perempuan','','') NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `katasandi` varchar(20) NOT NULL,
-  `gambar` varchar(20) NOT NULL
+CREATE TABLE `menu` (
+  `id_menu` int(11) NOT NULL,
+  `kategori` varchar(30) NOT NULL,
+  `nama_menu` varchar(30) NOT NULL,
+  `harga` varchar(30) NOT NULL,
+  `id_resto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `profil`
---
-
-INSERT INTO `profil` (`idpengguna`, `namapengguna`, `jeniskelamin`, `email`, `katasandi`, `gambar`) VALUES
-('11111', 'almirahaswinitha', 'perempuan', 'almirahaswinitha@gmail.com', 'almira1', 'almira.png'),
-('33333', 'trywulandary', 'perempuan', 'trywulandary@gmail.com', 'try3', 'try.png'),
-('55555', 'muhammadfatkhurrozi', 'laki-laki', 'muhammadfatkhurrozi@gmail.com', 'fatur55', 'fatur.png'),
-('77777', 'najibroyyan', 'laki-laki', 'najibroyyan@gmail.com', 'royan77', 'royyan.png');
 
 --
 -- Indexes for dumped tables
@@ -127,27 +76,21 @@ INSERT INTO `profil` (`idpengguna`, `namapengguna`, `jeniskelamin`, `email`, `ka
 -- Indeks untuk tabel `akun`
 --
 ALTER TABLE `akun`
-  ADD PRIMARY KEY (`id_user`),
-  ADD UNIQUE KEY `username` (`username`);
-
---
--- Indeks untuk tabel `datamenu`
---
-ALTER TABLE `datamenu`
-  ADD PRIMARY KEY (`idmenu`),
-  ADD KEY `idresto` (`idresto`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `kuliner`
 --
 ALTER TABLE `kuliner`
-  ADD PRIMARY KEY (`idresto`);
+  ADD PRIMARY KEY (`id_resto`),
+  ADD KEY `id_user` (`id`);
 
 --
--- Indeks untuk tabel `profil`
+-- Indeks untuk tabel `menu`
 --
-ALTER TABLE `profil`
-  ADD PRIMARY KEY (`idpengguna`);
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`id_menu`),
+  ADD KEY `id_resto` (`id_resto`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
@@ -157,17 +100,35 @@ ALTER TABLE `profil`
 -- AUTO_INCREMENT untuk tabel `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `kuliner`
+--
+ALTER TABLE `kuliner`
+  MODIFY `id_resto` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Ketidakleluasaan untuk tabel `datamenu`
+-- Ketidakleluasaan untuk tabel `kuliner`
 --
-ALTER TABLE `datamenu`
-  ADD CONSTRAINT `datamenu_ibfk_1` FOREIGN KEY (`idresto`) REFERENCES `kuliner` (`idresto`);
+ALTER TABLE `kuliner`
+  ADD CONSTRAINT `kuliner_ibfk_1` FOREIGN KEY (`id`) REFERENCES `akun` (`id`);
+
+--
+-- Ketidakleluasaan untuk tabel `menu`
+--
+ALTER TABLE `menu`
+  ADD CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`id_resto`) REFERENCES `kuliner` (`id_resto`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

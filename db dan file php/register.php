@@ -7,7 +7,7 @@ if($_POST){
     // POST DATA
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING); // menggunakan filter_sanitize_string agar bisa memfilter namanya
     $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-    $name = filter_input(INPUT_POST, 'nama_lengkap', FILTER_SANITIZE_STRING);
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
 
     $response = [];
@@ -22,7 +22,7 @@ if($_POST){
         $response['status']= false;
         $response['message']='Akun sudah digunakan';
     } else {
-        $insertAccount = 'INSERT INTO akun (username,password, nama_lengkap, email) values (:username, :password, :nama_lengkap, :email)';
+        $insertAccount = 'INSERT INTO akun (username,password, name,email) values (:username, :password, :name, :email)';
         $statement = $connection->prepare($insertAccount);
 
         try{
@@ -30,7 +30,7 @@ if($_POST){
             $statement->execute([
                 ':username' => $username,
                 ':password' => $password,
-                ':nama_lengkap' => $name,
+                ':name' => $name,
                 ':email' => $email
             ]);
 
@@ -39,7 +39,7 @@ if($_POST){
             $response['message']='Akun berhasil didaftar';
             $response['data'] = [
                 'username' => $username,
-                'nama_lengkap' => $name
+                'name' => $name
             ];
         } catch (Exception $e){
             die($e->getMessage());
