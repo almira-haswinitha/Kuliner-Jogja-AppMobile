@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    tools:context=".activity.RegisterActivity">
+
+    <TextView
+        android:id="@+id/tvPleaseCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/make_your_account"
+        android:textSize="24sp"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/etRegisterUsername"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/tvPleaseCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:drawableStart="@drawable/ic_username"
+        android:drawablePadding="24dp"
+        android:drawableLeft="@drawable/ic_username" />
+
+    <EditText
+        android:id="@+id/etRegisterPassword"
+        android:layout_below="@+id/etRegisterUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="24dp"
+        android:drawableLeft="@drawable/ic_password" />
+
+    <EditText
+        android:id="@+id/etRegisterNama"
+        android:layout_below="@+id/etRegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/nama_lengkap"
+        android:drawableStart="@drawable/ic_namalengkap"
+        android:drawablePadding="24dp"
+        android:drawableLeft="@drawable/ic_namalengkap" />
+
+    <EditText
+        android:id="@+id/etRegisterEmail"
+        android:layout_below="@+id/etRegisterNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/email"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="24dp"
+        android:drawableLeft="@drawable/ic_email" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_below="@id/etRegisterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register" />
+
+    <TextView
+        android:id="@+id/tvLoginHere"
+        android:layout_below="@id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/have_account"
+        android:gravity="center_horizontal" />
+
+
+
+
+</RelativeLayout>

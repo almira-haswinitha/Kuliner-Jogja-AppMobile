@@ -36,8 +36,8 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home,container,false);
-        sliderView =(SliderView) rootView.findViewById(R.id.sliderView);
-        mLinearLayout = (LinearLayout) rootView.findViewById(R.id.pagesContainer);
+        sliderView = rootView.findViewById(R.id.sliderView);
+        mLinearLayout = rootView.findViewById(R.id.pagesContainer);
         setupSlider();
 
         return rootView;

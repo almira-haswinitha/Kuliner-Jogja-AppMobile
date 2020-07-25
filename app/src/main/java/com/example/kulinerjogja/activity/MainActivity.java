@@ -1,5 +1,6 @@
 package com.example.kulinerjogja.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -9,17 +10,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.kulinerjogja.R;
+import com.example.kulinerjogja.SessionManager;
 import com.example.kulinerjogja.fragment.HomeFragment;
 import com.example.kulinerjogja.fragment.DaftarFragment;
 import com.example.kulinerjogja.fragment.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sessionManager = new SessionManager(MainActivity.this);
+        //if (sessionManager.isLoggedIn() == false) {
+         //   moveToLogin();
+        //}
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
@@ -30,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.fragment_container,new HomeFragment())
                 .commit();
     }
+
+    //private void moveToLogin() {
+    //    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+    //    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+    //    startActivity(intent);
+    //    finish();
+    //}
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override

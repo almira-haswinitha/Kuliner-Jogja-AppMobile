@@ -1,16 +1,33 @@
 <resources>
     <string name="app_name">KULINER JOGJA    </string>
-    <string name="profile">PROFILE</string>
-    <string name="category">Category</string>
-    <string name="favorite">Favorie in Jogja</string>
-    <string name="home">HOME</string>
+    <string name="profil">PROFIL</string>
+    <string name="kategori">Kategori</string>
+    <string name="favorit">Favorit di Jogja</string>
+    <string name="beranda">Beranda</string>
     <string name="daftar_kuliner">DAFTARKAN</string>
 
-    <string name="food">FOOD</string>
-    <string name="drink">DRINK</string>
+    <string name="makanan">MAKANAN</string>
+    <string name="minuman">MINUMAN</string>
 
     <string name="recomendation">RECOMENDATION"</string>
+    <string name="profile">Profil</string>
+    <string name="home">Home</string>
+    <string name="img_logo">logo</string>
+    <string name="or">or</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="no_hp">No Hp</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="create_account">Create New Account </string>
+    <string name="have_account">Already Have Account ? Login Here</string>
+    <string name="sign_in"> Sign In</string>
+    <string name="connect_facebook">Connect Facebook</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="register">Register</string>
+    <string name="sign_up"> Sign Up </string>
+    <string name="action_settings">setting</string>
+    <string name="logout">log out</string>
+    <string name="make_your_account">Make Your Account</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
