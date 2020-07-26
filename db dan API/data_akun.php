@@ -3,25 +3,24 @@
 	require_once 'setting_server.php';
 
 	// query menampilkan semua data
-	$query = "Select * from datamenu";
+	$query = "Select * from kuliner";
 
 	// mengkoneksikan
-	$sql = mysqli_query($con, $query);
+	$sql = mysqli_query($connection, $query);
 
 	// menampung hasil pada array
 	$ray = array();
 
 	while ($row  = mysqli_fetch_array($sql)) {
 		array_push($ray, array(
-			"id_menu" => $row ['idmenu'],
-			"kategori" => $row ['kategori-menu'],
-			"nama" => $row ['nama-menu'],
-			"harga" => $row ['harga'],
-			"id_resto" => $row ['idresto'],
+			'user_id' => $row['id'],
+                'username' => $row['username'],
+                'name' => $row['name'],
+                'email' => $row['email'],
 		));
 	}
 
 	echo json_encode($ray);
 
-	mysqli_close($con);
+	mysqli_close($connection);
 ?>

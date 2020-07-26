@@ -41,7 +41,7 @@
         android:drawableLeft="@drawable/ic_password" />
 
     <EditText
-        android:id="@+id/etRegisterNama"
+        android:id="@+id/etRegisterName"
         android:layout_below="@+id/etRegisterPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
 
     <EditText
         android:id="@+id/etRegisterEmail"
-        android:layout_below="@+id/etRegisterNama"
+        android:layout_below="@+id/etRegisterName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
