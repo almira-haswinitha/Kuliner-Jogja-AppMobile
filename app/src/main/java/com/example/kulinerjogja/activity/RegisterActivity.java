@@ -20,10 +20,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText etUsername, etPassword, etNama, etEmail;
+    EditText etUsername, etPassword, etName, etEmail;
     Button btnRegister;
     TextView tvLogin;
-    String Username, Password, Nama, Email;
+    String Username, Password, Name, Email;
     ApiInterface apiInterface;
 
     @Override
@@ -33,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         etUsername = findViewById(R.id.etRegisterUsername);
         etPassword = findViewById(R.id.etRegisterPassword);
-        etNama = findViewById(R.id.etRegisterNama);
+        etName = findViewById(R.id.etRegisterName);
         etEmail = findViewById(R.id.etRegisterEmail);
         
         btnRegister = findViewById(R.id.btnRegister);
@@ -49,9 +49,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             case R.id.btnRegister:
                 Username = etUsername.getText().toString();
                 Password = etPassword.getText().toString();
-                Nama = etNama.getText().toString();
+                Name = etName.getText().toString();
                 Email = etEmail.getText().toString();
-                register(Username, Password, Nama, Email);
+                register(Username, Password, Name, Email);
                 break;
             case R.id.tvLoginHere:
                 Intent intent = new Intent(this, LoginActivity.class);

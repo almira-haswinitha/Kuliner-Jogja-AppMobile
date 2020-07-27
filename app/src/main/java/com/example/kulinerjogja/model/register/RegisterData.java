@@ -4,18 +4,18 @@ import com.google.gson.annotations.SerializedName;
 
 public class RegisterData {
 
-	@SerializedName("nama_lengkap")
-	private String namaLengkap;
+	@SerializedName("name")
+	private String name;
 
 	@SerializedName("username")
 	private String username;
 
-	public void setNamaLengkap(String namaLengkap){
-		this.namaLengkap = namaLengkap;
+	public void setName(String name){
+		this.name = name;
 	}
 
-	public String getNamaLengkap(){
-		return namaLengkap;
+	public String getName(){
+		return name;
 	}
 
 	public void setUsername(String username){

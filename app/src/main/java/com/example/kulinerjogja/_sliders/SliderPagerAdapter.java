@@ -11,6 +11,8 @@ import java.util.List;
  * Created by bagicode on 12/04/17.
  */
 
+//test
+
 public class SliderPagerAdapter extends FragmentStatePagerAdapter {
 
     private static final String TAG = "SliderPagerAdapter";
