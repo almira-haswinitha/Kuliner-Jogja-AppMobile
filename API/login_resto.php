@@ -6,7 +6,7 @@ if($_POST){
 
     // Data
     $namaresto = $_POST['namaresto'] ?? '';
-    $passwordresto = $_POST['passwordresto'] ?? '';
+    $id_resto = $_POST['id_resto'] ?? '';
 
     $response = []; // Data Response
 
@@ -21,25 +21,25 @@ if($_POST){
     }
     else {
 
-        // Ambil password di db
-        $passwordDB = $query['passwordresto'];
+        // Ambil kategori_ di db
+        $kategori_DB = $query['id_resto'];
         // strcmp = membandingkan
-        if(strcmp(($passwordresto),$passwordDB) === 0){
+        if(strcmp(($id_resto),$kategori_DB) === 0){
             $response['status'] = true;
             $response['message'] = "Login Berhasil";
             $response['data'] = [
+                'id_resto' => $query['id_resto'],
                 'namaresto' => $query['namaresto'],
                 'alamat' => $query['alamat'],
                 'hari_operasional' => $query['hari_operasional'],
                 'waktu_buka' => $query['waktu_buka'],
                 'waktu_tutup' => $query['waktu_tutup'],
                 'deskripsi' => $query['deskripsi'],
-                'gambar' => $query['gambar'],
-                'id' => $query['id']
+                'gambar' => $query['gambar']
             ];
         } else {
             $response['status'] = false;
-            $response['message'] = "Password resto salah";
+            $response['message'] = "id resto salah";
         }
     }
 
