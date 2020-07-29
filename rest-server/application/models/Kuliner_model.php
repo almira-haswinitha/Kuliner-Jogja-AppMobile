@@ -2,7 +2,7 @@
 
 class Kuliner_model extends CI_Model
 {
-    public function getdatakuliner()
+    public function getDatakuliner($id_resto = null)
     {
         if($id_resto === null){
             return $this->db->get('kuliner')->result_array();
@@ -11,21 +11,22 @@ class Kuliner_model extends CI_Model
         }
     }
 
-    public function deletedatakuliner($id_resto_resto)
+    public function deleteDatakuliner($id_resto)
     {
         $this->db->delete('kuliner', ['id_resto' => $id_resto]);
         return $this->db->affected_rows();
     }
 
-    public function createddatakuliner($data)
+    public function createdDatakuliner($data)
     {
         $this->db->insert('kuliner',$data);
         return $this->db->affected_rows();
     }
 
-    public function updatedatakuliner($data, $id_resto)
+    public function updateDatakuliner($data, $id_resto)
     {
         $this->db->update('kuliner', $data, ['id_resto' => $id_resto]);
         return $this->db->affected_rows();
     }
 }
+?>

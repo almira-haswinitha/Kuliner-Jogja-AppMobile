@@ -2,7 +2,7 @@
 
 class menu_model extends CI_Model
 {
-    public function getdatamenu()
+    public function getdatamenu($id_menu = null)
     {
         if($id_menu === null){
             return $this->db->get('menu')->result_array();

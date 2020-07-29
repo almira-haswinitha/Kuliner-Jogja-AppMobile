@@ -18,9 +18,9 @@ class Datakuliner extends REST_Controller
     {
         $id_resto = $this->get('id_resto'); 
         if($id_resto === null){
-        $kuliner = $this->kuliner->getdatakuliner();
+        $kuliner = $this->kuliner->getDatakuliner();
         } else {
-            $kuliner = $this->kuliner->getdatakuliner($id_resto);
+            $kuliner = $this->kuliner->getDatakuliner($id_resto);
         }
         
         if($kuliner){
@@ -46,7 +46,7 @@ class Datakuliner extends REST_Controller
                 'message' => 'pilih id terlebih dulu!'
             ], REST_Controller::HTTP_BAD_REQUEST);
         } else{
-            if($this->kuliner->deletedatakuliner($id_resto) > 0){
+            if($this->kuliner->deleteDatakuliner($id_resto) > 0){
                 //ok
                 $this->response([
                     'status' => TRUE,
@@ -76,7 +76,7 @@ class Datakuliner extends REST_Controller
             'gambar' => $this->post('gambar')
         ];
 
-        if( $this->kuliner->createddatakuliner($data) > 0){
+        if( $this->kuliner->createdDatakuliner($data) > 0){
             $this->response([
                 'status' => TRUE,
                 'message' => 'kuliner baru telah ditambahkan.'
@@ -104,7 +104,7 @@ class Datakuliner extends REST_Controller
             'gambar' => $this->post('gambar')
         ];
 
-        if( $this->kuliner->updatedatakuliner($data, $id_resto) > 0){
+        if( $this->kuliner->updateDatakuliner($data, $id_resto) > 0){
             $this->response([
                 'status' => TRUE,
                 'message' => 'data kuliner telah di update.'
