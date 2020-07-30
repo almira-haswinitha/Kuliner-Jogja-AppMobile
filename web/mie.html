@@ -1,4 +1,5 @@
-
+<?php 
+include("koneksi.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,10 +39,10 @@
                 <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="kategori.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Restaurant Category</a>
+                <a class="nav-link active dropdown-toggle" href="kategori.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Restaurant Category</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="kategori.html">Food</a>
-                  <a class="dropdown-item" href="kategori.html">Drink</a>
+                  <a class="dropdown-item" href="food.html">Food</a>
+                  <a class="dropdown-item" href="drink.html">Drink</a>
                 </div>
               </li>
             <ul class="navbar-nav ml-auto">
@@ -63,8 +64,8 @@
           <div class="container">
             <div class="row slider-text align-items-center justify-content-center">
               <div class="col-md-8 text-center col-sm-12 ">
-                <h1 data-aos="fade-up">Local Food</h1>
-                <p class="mb-5" data-aos="fade-up" data-aos-delay="100">Gudeg merupakan makan tradsional yang berasal dari jogja</p>
+                <h1 data-aos="fade-up">FOOD</h1>
+                <p class="mb-5" data-aos="fadee-up" data-aos-delay="100">Gudeg merupakan makan tradsional yang berasal dari jogja</p>
               </div>
             </div>
           </div>
@@ -74,33 +75,115 @@
       </section>
     <!-- END slider -->
     </div> 
-    <center>
-       <section class="section  pt-5 top-slant-white2 relative-higher bottom-slant-gray">
-      
-      <div>
-        <div>
-          <div>
-              <div>
-                <div >
-                  <h3>DOWNLOAD</h3>
-                  <P>Come and try our app on android , you can use this download link below to download our app</P>
-                </div>
-              </div>
-              <div>
-                <div><center>
-                 <a href="https://www14.zippyshare.com/v/VAH0SLzO/file.html"><input type="submit" value="Miror 1" class="btn btn-primary"></a>
-                  <a href="https://drive.google.com/file/d/1STfPGkP08nhPeCk63uK-Ub7P5KvE_FJC/view?usp=sharing"><input type="submit" value="Miror 2" class="btn btn-primary"><br><br></a>
-                  <P>our you can use link below to download our app from playstore</P>
-                   <input type="submit" value="Google PLay" class="btn btn-primary">
+    
 
-                </div>
-              </div>
-            </form>
+    <section class="section bg-light  top-slant-white bottom-slant-gray">
+
+      <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+          <div class="row" data-aos="fade">
+            <div class="col-md-12 text-center heading-wrap">
+              <h2>Restaurant Available</h2>
+            </div>
           </div>
+        </div>
       </div>
-    </section>
-  </center>
-<!--ENd-->
+
+      <div class="container">
+        
+        <div class="row no-gutters">
+          <div class="col-md-6">
+            <div class="sched d-block d-lg-flex">
+            </div>
+
+            <div class="sched d-block d-lg-flex">
+              <div class="text">
+                <h3><center>Daftar Menu<center></h3>
+                  <table style="width: 100%">
+                    <tr> 
+                      <th>Nama     </th>
+                      <th>Harga </th>
+                    </tr>
+
+                    <tr>
+                      <td>Mie ayam     </td>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <td>10.000</td>
+                    </tr>
+
+                    <tr>
+                      <td>Es Teh     </td>
+                      <td>3.000</td>
+                    </tr>
+
+                    <tr>
+                      <td>Es Jeruk     </td>
+                      <td>3.000</td>
+                    </tr>
+                  </table>
+              </div>
+              <div class="text">
+                <h3>Mie Ayam Tumini</h3>
+                <p>Pencinta mie ayam jika ke Yogyakarta wajib mencicipi Mie Ayam Tumini. Berbeda dengan mie ayam biasa, racikan mie ayam ini disiram kuah kare yang kental.Nyam! <p>Jl. Imogiri Tim. No.187, Giwangan, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55163 </p> <p>senin-minggu (10.00-17.00)</p></p>
+              </div>
+              
+            </div>
+
+          </div>
+
+          <div class="col-md-6">
+            <div class="sched d-block d-lg-flex">
+              <div class="text">
+                <h3><center>Daftar Menu<center></h3>
+                  <table style="width: 100%">
+                    <tr> 
+                      <th>Nama     </th>
+                      <th>Harga </th>
+                    </tr>
+
+                    <tr>
+                      <td>Mie Iblis     </td>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <td>10.000</td>
+                    </tr>
+
+                      <tr>
+                      <td>Mie Angel     </td>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <td>10.000</td>
+                    </tr>
+
+                      <tr>
+                      <td>Mie Setan     </td>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <td>10.000</td>
+                    </tr>
+
+                      <tr>
+                      <td>Es Milo     </td>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <td>5.000</td>
+                    </tr>
+
+                    <tr>
+                      <td>Es Teh     </td>
+                      <td>4.000</td>
+                    </tr>
+
+                    <tr>
+                      <td>Es Jeruk     </td>
+                      <td>4.000</td>
+                    </tr>
+                  </table>
+              </div>
+              <div class="text order-1">
+                <h3>Mie gacoan</h3>
+                <p>Mie Gacoan menjadi tempat bersantap mie terbaik terutama bagi pelajar dan mahasiswa, dimana mereka bisa nongkrong, kerja tugas, ngobrol santai, dan ngeksis bareng. Dengan tempat yang atraktif, dan juga dilengkapi berbagai fasilitas <p>Ruko Raflessia Babarsari, Jl. Raya Kledokan No.10, Kledokan, Caturtunggal, Depok Sub-District, Sleman Regency, Special Region of Yogyakarta 55281 </p> <p>senin-minggu (10.00-22.00)</p></p>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+  
 
     <footer class="site-footer" role="contentinfo">
       <div class="container">
