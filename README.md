@@ -7,4 +7,4 @@ Ketua : Almira Haswinitha (1800018251)
 
 # Website : https://foodjogja.000webhostapp.com/
 
-# Aplikasi mobile : apk-realease.apk
+# Aplikasi mobile : app-realease.apk
